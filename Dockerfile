@@ -8,8 +8,8 @@ RUN apt-get -y update
 RUN apt-get install -y gnupg apt-transport-https ca-certificates
 # add qgis to sources.list
 RUN echo "deb https://qgis.org/debian-ltr stretch main" >> /etc/apt/sources.list
-RUN gpg --keyserver keyserver.ubuntu.com --recv 073D307A618E5811
-RUN gpg --export --armor 073D307A618E5811 | apt-key add - 
+RUN gpg --keyserver keyserver.ubuntu.com --recv CAEB3DC3BDF7FB45
+RUN gpg --export --armor CAEB3DC3BDF7FB45 | apt-key add - 
 RUN apt-get -y update
 #--------------------------------------------------------------------------------------------
 # Install stuff
